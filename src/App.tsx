@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import "./app.scss";
 
 interface Quest {
-  name: string;
   id: string;
 }
 
