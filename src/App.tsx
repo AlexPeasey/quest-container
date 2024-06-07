@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import "./app.scss";
+import Quest from "./components/quests/Quest";
 
-interface Quest {
-  id: string;
-}
 
 const App: React.FC = () => {
   const [quests, setQuests] = useState<Quest[]>([]);
@@ -11,12 +9,12 @@ const App: React.FC = () => {
   useEffect(() => {
     fetch("http://localhost:3000/quests").then((response) => response.json().then((data) => setQuests(data)));
   });
-  console.log(quests)
+  
   return (
     <div>
       <ul>
         {quests.map((quest) => (
-          <li key={quest.id}>{quest.id}</li>
+          <Quest key={quest.id} quest={quest} />
         ))}
       </ul>
     </div>
