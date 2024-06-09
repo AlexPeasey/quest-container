@@ -1,22 +1,10 @@
-import { useEffect, useState } from "react";
-import "./app.scss";
-import Quest from "./components/quests/Quest";
-
+import "./styles/App.scss";
+import QuestsContainer from "./components/Quests/QuestsContainer/QuestsContainer";
 
 const App: React.FC = () => {
-  const [quests, setQuests] = useState<Quest[]>([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/quests").then((response) => response.json().then((data) => setQuests(data)));
-  });
-  
   return (
-    <div>
-      <ul>
-        {quests.map((quest) => (
-          <Quest key={quest.id} quest={quest} />
-        ))}
-      </ul>
+    <div className="app">
+      <QuestsContainer />
     </div>
   );
 };
