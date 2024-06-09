@@ -11,16 +11,18 @@ const QuestsContainer: React.FC = () => {
   });
 
   return (
-    <div className="quests-container">
-      <div className="quests-container__heading">
+    <div className="quests-wrapper">
+      <div className="quests__heading">
         <h2>Quests</h2>
         <Tooltip content="Here you will find a list of important quests!" />
       </div>
-      <ul className="quests-container__list">
-        {quests.map((quest) => (
-          <Quest key={quest.id} quest={quest} />
-        ))}
-      </ul>
+      <div className="quests-container">
+        <ul className="quests-container__list">
+          {quests.map((quest) => (
+            <Quest key={quest.id} quest={quest} />
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

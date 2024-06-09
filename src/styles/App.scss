@@ -2,3 +2,14 @@ body {
   font-family: "Nunito Sans", sans-serif;
   color: #293232;
 }
+
+.app {
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+}
