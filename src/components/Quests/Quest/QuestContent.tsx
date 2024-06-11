@@ -1,6 +1,8 @@
+import { ReactNode } from "react";
+
 interface QuestContentProps {
   title: string;
-  description: string;
+  description: ReactNode;
 }
 
 const QuestContent: React.FC<QuestContentProps> = ({ title, description }) => {

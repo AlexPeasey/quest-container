@@ -136,7 +136,7 @@
                 "id": "3",
                 "first_name": "Alice",
                 "last_name": "Smith",
-                "profile_image": "https://example.com/alice_smith.png",
+                "profile_image": "/src/assets/sample_linkedin_contact.png",
                 "linkedin_url": "https://www.linkedin.com/in/alicesmith"
             },
             "job": {},
