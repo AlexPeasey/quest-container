@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Quest from "../Quest/Quest";
 import Tooltip from "../../Tooltip";
-import "./QuestsContainer.scss";
 
 const QuestsContainer: React.FC = () => {
   const [quests, setQuests] = useState<Quest[]>([]);
@@ -9,6 +8,15 @@ const QuestsContainer: React.FC = () => {
   useEffect(() => {
     fetch("http://localhost:3000/quests").then((response) => response.json().then((data) => setQuests(data)));
   });
+
+  // Function to format the date
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    const day = String(date.getDate()).padStart(2, "0");
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  };
 
   return (
     <div className="quests-wrapper">
@@ -19,7 +27,7 @@ const QuestsContainer: React.FC = () => {
       <div className="quests-container">
         <ul className="quests-container__list">
           {quests.map((quest) => (
-            <Quest key={quest.id} quest={quest} />
+            <Quest key={quest.id} quest={{ ...quest, due_date: formatDate(quest.due_date) }} />
           ))}
         </ul>
       </div>

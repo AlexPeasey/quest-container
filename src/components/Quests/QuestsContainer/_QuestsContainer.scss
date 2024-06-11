@@ -8,13 +8,11 @@
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  margin: -1rem;
 }
 .quests__heading {
   display: flex;
   gap: 0.75rem;
   align-items: center;
-  padding-bottom: 1rem;
 
   h2 {
     margin: 0;
@@ -24,15 +22,14 @@
 .quests-container {
   overflow-y: auto;
   height: 100%;
-  margin: -1rem;
   padding: 1rem;
-  margin-bottom: 0;
+  margin: 0 -1rem;
 
   &__list {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
     padding: 0;
-    margin-top: 0;
+    margin: 0;
   }
 }

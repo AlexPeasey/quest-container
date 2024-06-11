@@ -1,5 +1,4 @@
 import logo from "../assets/tooltip__icon.svg"
-import "../styles/Tooltip.scss"
 
 interface TooltipPropTypes {
   content: string;
