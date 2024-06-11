@@ -1,5 +1,4 @@
 import QuestContent from "./QuestContent";
-import QuestImage from "./QuestImage";
 
 interface Quest {
   id: string;
