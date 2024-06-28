@@ -124,6 +124,10 @@ const Quest: React.FC<QuestPropTypes> = ({ quest }) => {
           <img src="src/assets/arrow-45.svg" alt="" className="quest__visit-link" />
         </a>
       </div>
+      <div className="quest__controls">
+        <button aria-label="Mark as completed" className="quest__control__complete"><img src="src/assets/check-lg.svg" alt="Mark as completed" /></button>
+        <button aria-label="Dismiss quest" className="quest__control__dismiss"><img src="src/assets/x-lg.svg" alt="" /></button>
+      </div>
     </div>
   );
 };

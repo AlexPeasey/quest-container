@@ -27,7 +27,9 @@ const QuestsContainer: React.FC = () => {
       <div className="quests-container">
         <ul className="quests-container__list">
           {quests.map((quest) => (
-            <Quest key={quest.id} quest={{ ...quest, due_date: formatDate(quest.due_date) }} />
+            <li key={quest.id}>
+              <Quest quest={{ ...quest, due_date: formatDate(quest.due_date) }} />
+            </li>
           ))}
         </ul>
       </div>

@@ -21,6 +21,7 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+  position: relative;
 
   &__content-wrap {
     display: flex;
@@ -95,5 +96,33 @@
     a {
       color: inherit;
     }
+  }
+  &__controls {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    visibility: hidden;
+
+    button {
+      background: none;
+      color: inherit;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      transition: transform 0.25s ease;
+
+      &:hover {
+        filter: brightness(0);
+        transform: scale(1.125);
+      }
+    }
+  }
+  &:hover &__controls {
+    visibility: visible;
   }
 }
